@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { RouterView, RouterLink, useRoute } from "vue-router";
+import InstallPrompt from "./components/InstallPrompt.vue";
 
 const route = useRoute();
 
@@ -24,6 +25,9 @@ function isActive(path: string) {
       <main class="flex-1 px-5 py-6 pb-24">
         <RouterView />
       </main>
+
+      <!-- Prompt de instalación PWA -->
+      <InstallPrompt />
 
       <!-- Bottom Navigation -->
       <nav
